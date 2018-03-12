@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const Hoek = require('Hoek')
 module.exports = ({
     requestRequired: (req, required, Errors) => {
         required.map((key, index) => {
@@ -7,10 +8,13 @@ module.exports = ({
         return req.validationErrors()
     },
 
-    validateBody: (object, ...body) => returnObject => body.map(key => {
-        if (object[key] !== undefined) returnObject[key] = object[key]
-        return returnObject
-    }),
+    validateBody: (object, ...body) => returnObject => {
+        object = Hoek.merge({}, object)
+        body.map(key => {
+            if (object[key] !== undefined) returnObject[key] = object[key]
+            return returnObject
+        })
+    },
 
     requestOptional: (req, required, Errors) => {
         required.map((key, index) => {
