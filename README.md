@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/higordiego/tester-lap3d.svg?branch=master)](https://travis-ci.org/higordiego/tester-lap3d)
 # Processo Seletivo 
 
     Candidate: Higor Diego
