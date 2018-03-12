@@ -11,6 +11,7 @@
 
 - Dependencies Application: ` npm i `
 - Dependencies Docker: `npm i nodemon`
+- Dependencies Docker: `bower install`
 - Dependencies Doc: `npm i apidoc live-server -g`
 
 

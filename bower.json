@@ -1,0 +1,28 @@
+{
+  "name": "Lap3d",
+  "description": "project tester",
+  "main": "app.js",
+  "authors": [
+    "Higor Diego <higordiegoti@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularJS",
+    "html5",
+    "bootstrap"
+  ],
+  "homepage": "https://github.com/higordiego/tester-lap3d",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-chart": "^0.5.0",
+    "angular-input-masks": "^2.6.0"
+  }
+}
