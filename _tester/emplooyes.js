@@ -13,6 +13,10 @@ describe('Routes Employees', () => {
             .catch(err => console.log('estou aqui', err))
     })
 
+    after(function(done){
+        process.exit(0)
+      })
+
     describe(`Route get ${rotaUrl}`, (done) => {
         it('should list a Emplooyes', (done) => {
             requestAux.defaultGet(done, request, defaultObject, rotaUrl)
