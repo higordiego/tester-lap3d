@@ -38,7 +38,7 @@
 - Docker 17.12.0
 - Docker Compose 1.18.0
 
-## Start Documentation
+## Start Application
 `docker-compose up`
 
 ### Access
