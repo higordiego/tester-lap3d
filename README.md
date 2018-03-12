@@ -2,6 +2,7 @@
 [![bitHound Dependencies](https://www.bithound.io/github/higordiego/tester-lap3d/badges/dependencies.svg)](https://www.bithound.io/github/higordiego/tester-lap3d/master/dependencies/npm)
 [![bitHound Code](https://www.bithound.io/github/higordiego/tester-lap3d/badges/code.svg)](https://www.bithound.io/github/higordiego/tester-lap3d)
 [![bitHound Overall Score](https://www.bithound.io/github/higordiego/tester-lap3d/badges/score.svg)](https://www.bithound.io/github/higordiego/tester-lap3d)
+[![NSP Status](https://nodesecurity.io/orgs/higor-diego/projects/d08ae528-73a6-4d05-b505-7a22f69830ce/badge)](https://nodesecurity.io/orgs/higor-diego/projects/d08ae528-73a6-4d05-b505-7a22f69830ce)
 # Processo Seletivo 
 
     Candidate: Higor Diego
