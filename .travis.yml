@@ -1,5 +1,6 @@
 language: node_js
 node_js: stable
 sudo: required
+repo_token: JRaUDY8WGXfAFFcV70V9TdLdVyCfnfd8H
 
 services: mongodb
