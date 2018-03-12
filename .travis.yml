@@ -3,5 +3,7 @@ node_js:
   - "iojs"
   - "8.10.0"
 
+services: mongodb
+
 before_script:
   - npm install
