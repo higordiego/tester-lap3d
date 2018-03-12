@@ -1,4 +1,7 @@
 [![Build Status](https://travis-ci.org/higordiego/tester-lap3d.svg?branch=master)](https://travis-ci.org/higordiego/tester-lap3d)
+[![bitHound Dependencies](https://www.bithound.io/github/higordiego/tester-lap3d/badges/dependencies.svg)](https://www.bithound.io/github/higordiego/tester-lap3d/master/dependencies/npm)
+[![bitHound Code](https://www.bithound.io/github/higordiego/tester-lap3d/badges/code.svg)](https://www.bithound.io/github/higordiego/tester-lap3d)
+[![bitHound Overall Score](https://www.bithound.io/github/higordiego/tester-lap3d/badges/score.svg)](https://www.bithound.io/github/higordiego/tester-lap3d)
 # Processo Seletivo 
 
     Candidate: Higor Diego
