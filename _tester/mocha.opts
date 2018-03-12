@@ -1,0 +1,3 @@
+--require _tester/help.js
+--reporter spec
+--slow 900

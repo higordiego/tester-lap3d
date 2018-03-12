@@ -1,0 +1,40 @@
+version: "3"
+services:
+    mongodb:
+        image: mongo:latest
+        restart: always
+        container_name: "mongodb_lap"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --smallfiles --logpath=/dev/null
+
+    backend:
+        image: node:8.9.3
+        restart: always
+        container_name: backend_lap
+        volumes:
+            - .:/backend
+            - /node_modules
+        ports:
+            - 3000:4000
+        command: bash -c "cd /backend && node_modules/.bin/nodemon"
+        environment:
+        - PORT=4000
+        - MONGODB_URL=mongodb://mongodb_lap/lap
+        - API_VERSION = /api/v1
+
+    documentation:
+        image: nginx
+        container_name: "documentation"
+        restart: always
+        volumes:
+        - ./doc-html:/usr/share/nginx/html
+        ports:
+        - "8080:80"
+        environment:
+        - NGINX_PORT=80
