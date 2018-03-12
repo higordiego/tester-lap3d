@@ -12,7 +12,7 @@
 ` apidoc -e "(node_modules|public|_tester)" -o doc-html /apidoc `
 
 
-# Marchine Local
+# Machine Local
 ### Technologies needed
 - Nodejs 8.10.0 or superior
 - MongoDB 3.6
