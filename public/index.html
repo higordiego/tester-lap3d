@@ -1,8 +1,80 @@
-<html>
-    <header>
-        <title>Testando</title>
-    </header>
-    <body>
-        <h1>Testando</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tester Lap3d</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body ng-controller="EmployeesCtrl">
+    <div class="jumbotron" ng-init="list()">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="text-center">
+                    <h3>Cadastre-se</h3>
+                    <p>Testando bla bla bla bla</p>
+                </div>
+                <div class="col-md-offset-1">
+                    <form class="form-inline" ng-submit="save(employeesC)">
+                        <input type="text" class="form-control" ng-model="employeesC.name" placeholder="Nome" required>
+                        <input type="text" class="form-control" ng-model="employeesC.lastName" placeholder="Sobrenome" required>
+                        <input type="text" class="form-control" ng-model="employeesC.participation" ui-percentage-mask ui-percentage-value placeholder="Participação"
+                            required>
+                        <button type="submit" class="form-control">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 40px">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="text-center">
+                <h3>DADOS</h3>
+                <p>Testando bla bla bla bla</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container" style="margin-top: 10px">
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th class="text-center">Participações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="(key, value) in employees">
+                            <td>{{key +1}}</td>
+                            <td>{{value.name}}</td>
+                            <td>{{value.lastName}}</td>
+                            <td class="text-center">{{value.participation | number: 2}} %</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <script src="library/angular/angular.min.js"></script>
+    <script src="library/angular-input-masks/angular-input-masks-standalone.min.js"></script>
+    <script src="library/chart.js/dist/Chart.min.js"></script>
+    <script src="library/angular-chart.js/dist/angular-chart.min.js"></script>
+
+    <!-- angular modules -->
+    <script src="app.js"></script>
+</body>
+
+
 </html>
