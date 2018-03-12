@@ -17,7 +17,6 @@
 # Generate Documentation
 ` apidoc -e "(node_modules|public|_tester)" -o doc-html /apidoc `
 
-
 # Machine Local
 ### Technologies needed
 - Nodejs 8.10.0 or superior
