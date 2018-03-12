@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const Hoek = require('Hoek')
+const Hoek = require('hoek')
 module.exports = ({
     requestRequired: (req, required, Errors) => {
         required.map((key, index) => {
