@@ -9,6 +9,7 @@
 # Install dependencies
 
 - Dependencies Application: ` npm i `
+- Dependencies Docker: `npm i nodemon`
 - Dependencies Doc: `npm i apidoc live-server -g`
 
 
