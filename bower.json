@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "angular": "^1.6.9",
-    "angular-chart": "^0.5.0",
-    "angular-input-masks": "^2.6.0"
+    "angular-input-masks": "^2.6.0",
+    "angular-chart.js": "^1.1.1"
   }
 }

@@ -9,15 +9,26 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body ng-controller="EmployeesCtrl">
+<body ng-controller="EmployeesCtrl" ng-cloak>
     <div class="jumbotron" ng-init="list()">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-md-7 col-md-offset-2">
                 <div class="text-center">
                     <h3>Cadastre-se</h3>
-                    <p>Testando bla bla bla bla</p>
+                    <p>Algum texto aqui</p>
                 </div>
                 <div class="col-md-offset-1">
                     <form class="form-inline" ng-submit="save(employeesC)">
@@ -25,7 +36,8 @@
                         <input type="text" class="form-control" ng-model="employeesC.lastName" placeholder="Sobrenome" required>
                         <input type="text" class="form-control" ng-model="employeesC.participation" ui-percentage-mask ui-percentage-value placeholder="Participação"
                             required>
-                        <button type="submit" class="form-control">Enviar</button>
+                        <button type="submit" ng-class="button ? 'btn btn-primary form-control' : 'btn btn-info form-control'">{{button ? 'Salvar' : 'Editar'}}</button>
+                        <a class="btn btn-default" ng-if="!button" ng-click="clear()">Limpar</a>
                     </form>
                 </div>
             </div>
@@ -35,7 +47,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="text-center">
                 <h3>DADOS</h3>
-                <p>Testando bla bla bla bla</p>
+                <p>Algum texto aqui</p>
             </div>
         </div>
     </div>
@@ -49,6 +61,8 @@
                             <th>Nome</th>
                             <th>Sobrenome</th>
                             <th class="text-center">Participações</th>
+                            <th> Editar </th>
+                            <th> Deletar </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -57,6 +71,12 @@
                             <td>{{value.name}}</td>
                             <td>{{value.lastName}}</td>
                             <td class="text-center">{{value.participation | number: 2}} %</td>
+                            <td>
+                                <a class="btn btn-info" ng-click="edit(value)">Editar</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" ng-click="delete(value)">Deletar</a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
