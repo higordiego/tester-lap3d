@@ -1,23 +1,23 @@
 (function () {
     'use strict'
     function insert ($http, data){
-        return $http.post('http://d154a919.ngrok.io/api/v1/employees', data)
+        return $http.post('http://localhost:3000/api/v1/employees', data)
     }
     
     function listAll ($http) {
-        return $http.get('http://d154a919.ngrok.io/api/v1/employees')
+        return $http.get('http://localhost:3000/api/v1/employees')
     }
 
     function editEmployees ($http, data) {
-        return $http.put('http://d154a919.ngrok.io/api/v1/employees/' +data._id, data)
+        return $http.put('http://localhost:3000/api/v1/employees/' +data._id, data)
     }
 
     function listOne($http, data) {
-        return $http.get('http://d154a919.ngrok.io/api/v1/employees/' +data._id)
+        return $http.get('http://localhost:3000/api/v1/employees/' +data._id)
     }
 
     function deleteEmployees ($http, data) {
-        return $http.delete('http://d154a919.ngrok.io/api/v1/employees/' +data._id)
+        return $http.delete('http://localhost:3000/api/v1/employees/' +data._id)
     }
 
     function graph (data) {
