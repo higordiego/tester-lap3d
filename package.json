@@ -8,7 +8,9 @@
     "doc": "live-server ./doc-html",
     "lint": "eslint '**/*.js' ",
     "lint:fix": "eslint '**/*.js' --fix",
-    "test": "mocha --order default --opts  _tester/mocha.opts _tester/*.js"
+    "test": "mocha --order default --opts  _tester/mocha.opts _tester/*.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -30,8 +32,10 @@
     "hoek": "^5.0.3",
     "mocha": "^5.0.4",
     "mongoose": "^4.13.7",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.17.1",
-    "supertest": "^3.0.0"
-  }
+    "supertest": "^3.0.0",
+    "snyk": "^1.114.0"
+  },
+  "snyk": true
 }
